@@ -67,26 +67,26 @@ function amelia_calendar( $atts ){
 			var wpAmeliaSettings = {"capabilities":{"canRead":true,"canReadOthers":true,"canWrite":true,"canWriteOthers":true,"canDelete":true,"canWriteStatus":false},"daysOff":[],"general":{"itemsPerPage":12,"phoneDefaultCountryCode":"us","timeSlotLength":1800,"serviceDurationAsSlot":true,"defaultAppointmentStatus":"pending","gMapApiKey":"","addToCalendar":true,"requiredPhoneNumberField":false,"numberOfDaysAvailableForBooking":365,"showClientTimeZone":false,"redirectUrlAfterAppointment":""},"googleCalendar":{"clientID":"","clientSecret":""},"notifications":{"senderName":"","senderEmail":"","notifyCustomers":true,"cancelSuccessUrl":null,"cancelErrorUrl":null,"smsSignedIn":false},"payments":{"currency":"EUR","priceSymbolPosition":"before","priceNumberOfDecimals":2,"priceSeparator":2,"defaultPaymentMethod":"onSite","onSite":true,"coupons":true,"payPal":{"enabled":false,"sandboxMode":false,"testApiClientId":"","liveApiClientId":""},"stripe":{"enabled":false,"testMode":false,"livePublishableKey":"","testPublishableKey":""},"wc":{"enabled":false}},"role":"admin","weekSchedule":[{"day":"Monday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]},{"day":"Tuesday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]},{"day":"Wednesday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]},{"day":"Thursday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]},{"day":"Friday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]},{"day":"Saturday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]},{"day":"Sunday","time":["9:00","22:00"],"periods":[{"time":["09:00","22:00"]}],"breaks":[]}],"wordpress":{"dateFormat":"j F Y","timeFormat":"H:i","startOfWeek":1},"labels":{"enabled":true},"roles":{"allowConfigureSchedule":false,"allowConfigureDaysOff":false,"allowConfigureSpecialDays":false,"allowWriteAppointments":false,"automaticallyCreateCustomer":true,"inspectCustomerInfo":true},"customization":{"primaryColor":"#1A84EE","primaryGradient1":"#1A84EE","primaryGradient2":"#0454A2","textColor":"#354052","textColorOnBackground":"#FFFFFF","font":"Lato"}};
 			var localeLanguage = "nl_NL";
 		/* ]]> */
-    </script>'; ?>
+    </script>
+    <script>
+	  var wpAmeliaPluginURL = "'.AMELIA_URL.'"
+	  var wpAmeliaPluginAjaxURL = "'.AMELIA_ACTION_URL.'"
+	  var menuPage = "wpamelia-calendar"
+	</script>';
 
-    <!--suppress JSUnusedLocalSymbols -->
-	<script>
-	  var wpAmeliaPluginURL = '<?php echo AMELIA_URL; ?>'
-	  var wpAmeliaPluginAjaxURL = '<?php echo AMELIA_ACTION_URL; ?>'
-	  var menuPage = 'wpamelia-calendar'
-	</script>
+	return '<div id="amelia-app-backend" class="amelia-booking">
+		  <transition name="fade">
+		    <router-view></router-view>
+		  </transition>
+		</div>
 
-	<div id="amelia-app-backend" class="amelia-booking">
-	  <transition name="fade">
-	    <router-view></router-view>
-	  </transition>
-	</div>
-
-	<style type="text/css">
-		.am-page-header {
-			display: none !important;
-		}
-	</style>
+		<style type="text/css">
+			.am-page-header {
+				display: none !important;
+			}
+		</style>
+    '; ?>
+	
 <?php
 }
 add_shortcode( 'amelia_calendar', 'amelia_calendar' );
