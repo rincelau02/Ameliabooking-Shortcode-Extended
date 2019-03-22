@@ -27,5 +27,5 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html <br/>
 3. screenshot-3.png<br/>
 <br/>
 == Changelog ==<br/>
-1.1 - added functionality to warn user that the amelia calendar need to be install first.
+1.1 - added functionality to warn user that the amelia calendar need to be install first. <br/>
 1.0 - no major change release of Amelia Shortcode Extended
