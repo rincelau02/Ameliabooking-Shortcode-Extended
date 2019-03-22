@@ -8,6 +8,8 @@ Author: Laurince G. Quijano
 Author URI: https://laurincequijano.com/
 Text Domain: wpamelia
 Domain Path: /languages
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 use AmeliaBooking\Domain\Services\Settings\SettingsService;
