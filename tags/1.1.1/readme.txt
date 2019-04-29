@@ -2,7 +2,7 @@
 Contributors: rincelau02
 Tags: Amelia, Shortcode, Extended, Wordpress
 Requires at least: 4.2
-Tested up to: 5.2
+Tested up to: 5.1.1
 Requires PHP: 5.6 to higher
 Stable tag: 1.1.1
 License: GPLv2 or later
@@ -26,10 +26,6 @@ This Adds on for Amelia plugin that added a shortcode for the calendar in the ba
 3. screenshot-3.png
 
 == Changelog ==
-1.2
-- added error handler for is_plugin_active
-- compatible with Wordpress 5.2
-
 1.1.1
 - fixed problem with detecting active install amelia calendar.
 
